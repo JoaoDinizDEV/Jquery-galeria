@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #5f27cd; /* Cor do cabeçalho */
+    padding: 16px 0; /* Espaçamento */
+    color: #fff;/* Cor das letras */
+    display: flex; /* Deixa os elementos flexiveis  */
+    border-bottom: 16px solid #341f97; /* Separação de elementos */
+    justify-content: center; /* Alinha o conteudo no centro */
+    text-transform: uppercase; /* Deixa o texto em maiusculo */
+    font-style: italic; /* Deixando a fonte em italico */
+}
+
+header button {
+    margin-left: 16px; /* O botão "NOVA IMAGEM" deixamos ele com uma margen melhor  */
+}
+
+form{
+    background-color: #c8d6e5; /* Adicionando cor ao formulario */
+    padding: 24px 0; /* Espaçamento de cima e embaixo de 24px e 0 para as laterais */
+    text-align: center; /* Alinhamento de texto */
+    display: none;
+
+}
+
+form h2 {
+    margin-bottom: 16px; /* Titulo estava muito perto dos botoes */
+}
+
+input,
+button{ /* Vamos estilizar os mesmos atributos para os dois */
+    padding: 8px; /* Criamos uma separação melhor entre os input */
+
+}
+
+button {
+    background-color: #009432; /* Adicionando cor os botoes do formulario */
+    border: none; /* Sem borda */
+    font-weight: bold; /* Deixando a fonte em negrito */
+    text-transform: uppercase; /*Transformando o texto em maiusculo  */
+    color: #fff;
+    cursor: pointer; /*Altera o cursor para uma interação melhor no código  */
+
+}
+
+#botao-cancelar{
+   background-color: red; /* Deixando o botão de cancelar na cor vermelho */
+}
+
+ul{
+    display: flex; /*Elementos fiquem um ao lado do outro */
+    flex-wrap: wrap;
+
+}
+
+ul li {
+    max-width: 25%; 
+    list-style: none; /*Remover as bolinhas do lado da imagem*/
+    position: relative;
+    max-height: 280px; /*Altura maxima*/
+    overflow-y: hidden; /*Deixando as imagens todas iguais*/
+}
+
+ul li img {
+    width: 100%; /*Largura de 100% */
+}
+
+.overlay-imagem-link {
+    padding: 16px; /*Espaçamento interno*/
+    background-color: rgba(0,0,0, 0.7); /*Cor de fundo*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease 0.5s;/*Adicionando a transição no texto*/
+
+}
+
+.overlay-imagem-link a {
+    color: #fff; /*Cor branca */
+    text-decoration: none; /*Removendo o underline*/
+}
+
+ul li:hover .overlay-imagem-link{
+    opacity: 1; /*Quando coloca o mouse aparece o texto*/
+}
